@@ -1,0 +1,74 @@
+body {
+  background-color: antiquewhite;
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.chatbot-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card-body.chat-area {
+  background-color:  #ECFAE5;
+  border-radius: 10px;
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.message {
+  display: flex;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  background-color: #CAE8BD;
+}
+
+.message.user {
+  justify-content: flex-end;
+  background-color: #F0BB78;
+  color:  black;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 8px 0;
+  max-width: 75%;
+  align-self: flex-end;
+  animation-name: fadeInRight;
+}
+
+.message.bot {
+  justify-content: flex-start;
+  background-color: #CAE8BD;
+  color: #121211;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 8px 0;
+  max-width: 75%;
+  align-self: flex-start;
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+} 
+
+
+
+
+
